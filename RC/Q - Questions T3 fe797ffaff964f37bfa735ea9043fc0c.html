@@ -1,0 +1,628 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Q - Questions T3</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="50274ae4-49de-4b51-8f26-f54761014e35" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">❓</span></div><h1 class="page-title">Q - Questions T3</h1></header><div class="page-body"><h2 id="0b43f257-77b1-40f3-ba66-da7d5c62e4ef" class="">Parte I</h2><ul id="10b2d567-c1d3-4f19-9234-b4a79651b531" class="toggle"><li><details open=""><summary>Tipos de redes</summary><ul id="c37b2c4e-defd-493d-9ac1-a5e5ed7ef38a" class="bulleted-list"><li>PAN (Red de area personal)</li></ul><ul id="00e518ca-b300-4274-a9a3-305e03d22a32" class="bulleted-list"><li>LAN (Red de area local)</li></ul><ul id="5740c619-6c14-43a0-91cd-6eb4bcdf9f49" class="bulleted-list"><li>MAN (Red de area metropolitana)</li></ul><ul id="9ea07d44-38d4-4090-9803-418dbc6a99c8" class="bulleted-list"><li>WAN (Red de area extensa)</li></ul></details></li></ul><ul id="ccae85a5-1bb8-4a1d-ad04-c6c041d71638" class="toggle"><li><details open=""><summary>Concepto de WAN, Wide area network</summary><p id="c6aff8e5-26c0-4bbe-b77d-6e9d18fb2955" class="">Red que cubre una extensa area geografica que requiere atravesar rutas de acceso publico y utiliza circuitos proprcionados por una entidad proveedora de servicios de telecomunicaion. Se caracteriza por tener alta velocidadm, medios de transmision diversos sobre todos los satelites, soporta multiples servicios de transmision de datos, voz y video, tiene tasa de error superior a las LAN y aunque puede ser privada la mayoria esta contratada por compañias tecnologicas.</p><ul id="1d4ba104-7c35-446c-b82b-c6c2e6dd46b5" class="toggle"><li><details open=""><summary>Alcance</summary><p id="dc275f9f-c8e3-471e-ace8-84d357409bdc" class="">Conectar ordenadores de cualquier localizacion del mundo</p></details></li></ul><ul id="e3270c38-51d6-4615-ab29-0826b6e03f6a" class="toggle"><li><details open=""><summary>Conexion</summary><p id="2c5e06e0-6c8e-402a-81bc-e0be3c9a31e5" class="">Linea telefonica, fibra optica, satelites, inalambrica terrestre, ...</p></details></li></ul><ul id="50637020-3981-43f1-8de0-d13ce14a95d1" class="toggle"><li><details open=""><summary>Redes Publicas</summary><p id="7c0b8d0f-485d-42e6-b8bb-13cd4085c72a" class="">Los medios de conexion de las lineas utilizadas son propiedades de empresas de telecomunicaciones que las alquilan al publico y a compañias en  general</p></details></li></ul></details></li></ul><ul id="62b1b999-9735-4595-b2a2-e8a705cd31ea" class="toggle"><li><details open=""><summary>Clasificacion</summary><figure id="fe797ffa-ff96-4f37-bfa7-35ea9043fc0c" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled.png"><img style="width:664px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled.png"/></a></figure></details></li></ul><ul id="45c792f1-0849-41b2-a7c9-400fdb34c4f2" class="toggle"><li><details open=""><summary>Tipos de servicios de  comunicacion WAN</summary><ul id="0d3a268e-406d-4440-bbbd-ea352dca4e07" class="toggle"><li><details open=""><summary>Lineas dedicadas</summary><p id="d29266b0-8c58-4f6f-b902-57b4bb68ff1f" class="">Elenlace dedicado permanentemente con un caudal reservado, se une o no.</p></details></li></ul><ul id="9cee858b-2664-41ba-b32a-f5da06b15b44" class="toggle"><li><details open=""><summary>Conmutacion de circuitos</summary><p id="df064fc7-1fea-45e7-8d94-90a9ffed61b4" class="">La conexion solo se establece cuando se necesita, pero mientras hay conexion el caudal esta reservado al usuario tanto si lo usa como si no.</p></details></li></ul><ul id="a5fcad5a-57be-40e1-85c7-3df2dedaa9fb" class="toggle"><li><details open=""><summary>Conmutacion de paquetes</summary><p id="d390e161-f418-4936-9fb2-5a63bc76eec6" class="">El ancho de banda disponible es compartido por diversos circuitos, de forma que se multiplexa trafico de diferentes usuarios, la infraestructura se aprovecha de manera optima.</p></details></li></ul></details></li></ul><ul id="dca8267e-1689-47f9-bf5c-2758c29c2f58" class="toggle"><li><details open=""><summary>Lineas dedicadas</summary><p id="1d19f4f0-8727-438f-915c-6f4fce40d0bd" class="">Conexiones P2P, conectan dispositivos de red que necesitan intercambio de informacion con un flujo de transmision constante y garantizado, el costo proporcional a la distancia y la capacidad (Tarifa plana), las principales velocidades son 64, 128, 256 y 512 Kb/s, 2 y 34 Mb/s y las caracteristicas tecnicas del servicio son enlaces con soporte multiprotocolo, variedad de interfaces de entrega del servicio y la velocidad garantizada y posibilidad de aumento de velocidades.</p><figure id="0f2824ca-5cf5-401e-9a2a-18d931e5697f" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%201.png"><img style="width:695px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%201.png"/></a></figure></details></li></ul><ul id="f82f4a6e-8810-422a-8859-28d6587106fc" class="toggle"><li><details open=""><summary>Redes de conmutacion de circuitos</summary><p id="5912877d-66ff-4e1a-a08a-e73acc393e00" class="">Adecuadas para conexiones de poco tiempo, coste proporcional al tiempo y tecnologias como RTB (Red de telefonia basica) y RDSI (Red digital de servicios integrados)  o ISDN</p><ul id="6c1b1206-1601-411d-8aa8-63655eaa3e6d" class="toggle"><li><details open=""><summary>Inconvenientes</summary><p id="6b0421d2-ad41-43a8-8c41-ab7aa2c4bbcb" class="">La capacidad del canal se desaprovecha cuando no se envian datos, origen y destino deben de transmitir a la misma velocidad, riesgo de congestion de red, el numero de canales es limitado y cada conexion consume muchos recursos.</p></details></li></ul></details></li></ul><ul id="92bd3827-f0f5-4d63-95cc-af58aa461fa3" class="toggle"><li><details open=""><summary>Redes de conmutacion de paquetes</summary><p id="c14d1c24-8b9c-445e-b2e7-bbcd3a2f9526" class="">Aprovecha mejor los recursos, posibilidad de crear circuitos virtuales (CV) de dos tipos : </p><ul id="61eb70e7-bee5-47a1-a0e5-3b51eba06969" class="bulleted-list"><li>Conmuados - SVCs (Switched Virtual Circuits)</li></ul><ul id="d677fb7c-a4c8-4431-800b-a959589e8538" class="bulleted-list"><li>Permanentes - PVCs (Permanent Virtual Circuits)</li></ul><ul id="e03995d7-0c54-4f01-8a12-a58c32cb77b1" class="toggle"><li><details open=""><summary>Mediante circuito virtual</summary><figure id="4b4ae0c1-3842-4fc7-8a08-c3966c84dcbe" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%202.png"><img style="width:576px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%202.png"/></a></figure><figure id="8301abd3-68a6-4000-ba6f-279258126dc5" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%203.png"><img style="width:700px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%203.png"/></a></figure></details></li></ul></details></li></ul><h2 id="84a59570-42a8-43f5-a012-9817fcd6a6b0" class="">Parte II</h2><ul id="1eafafe6-0e5a-4016-98fc-fc0ddb6fd1c5" class="toggle"><li><details open=""><summary>Red Digital de servicios integrados</summary><p id="d186335e-6325-4146-a185-1d31072abe37" class="">Las caracteristicas de este tipo de res son que son conexiones digitales entre abonados, integracion de voz y datos a traves de la misma interfaz, entre bentanas de la RSDI se encuantran :</p><ul id="a059e48b-e60e-412c-83fc-c7a60d4a0fb2" class="bulleted-list"><li>La posibilidad de conectar inteligentemente varios dispositivos a una misma linea</li></ul><ul id="4e0067ca-118c-490f-a60a-86ccf9b8aabd" class="bulleted-list"><li>La posibilidad de obtener varios canales de 64 Kbps segun lo demanden las necesidades</li></ul><p id="9db28756-8770-4a21-9f80-42e1d5c978a7" class="">Los tipos de canales / tipos de acceso : </p><ul id="e20cec26-92b6-4bd7-b4f0-4aec875e25f1" class="bulleted-list"><li>Canal B - a 64 Kbps para voz y datos. Puede haber un numero variable segun el tipo de interfaz.</li></ul><ul id="313354cb-afbd-46dc-8a26-65c1ac4b8b08" class="bulleted-list"><li>Canal D - a 16 a 64 Kbps para señalizacion </li></ul><ul id="7950fafd-7484-4d28-a30f-a41f5f51cd57" class="bulleted-list"><li>Acceso Basico (BRI, Basic Rate Interface) - formando por 2 canales B y uno D (2B + D) </li></ul><ul id="3f332d65-5ca3-46ed-83aa-3faeb817a67d" class="bulleted-list"><li>Acceso primario (PRI, Primary Rate Interface)</li></ul></details></li></ul><ul id="4ac962ca-74bf-450f-9a39-bfebffab35a2" class="toggle"><li><details open=""><summary>RDSI-BA /  ATM</summary><p id="8003d9a4-a686-414f-9b57-5fd933282d4d" class="">ATM es la ecnologia de los cuale implementa las redes B-ISDN, los objetivos son aplicar el principio de aprovechamiento de la conmutacio de paquetes a todo tipo de trafico. Las caracteristicas son :</p><ul id="25ac8734-b3c2-4706-9388-c2dc0932a51e" class="bulleted-list"><li>Protocolo CONS, por tanto se garantiza el orden de llegada </li></ul><ul id="5f1c3303-8a22-45c9-9d8c-94e821c11635" class="bulleted-list"><li>Proporciona multiples canales en la linea mediante MDT</li></ul><ul id="b6ffd60f-727f-4a00-b364-a79416c45a97" class="bulleted-list"><li>Transmision mediante CV de unidades de datos de tamaño fijo</li></ul><ul id="c18a0527-92ee-4def-a695-adf3ea98462a" class="bulleted-list"><li>Parecido a Frame Relay con mas velocidad y muchas mas posibilidades de control de trafico. Pensando para ofrecer calidad de servicio.</li></ul><ul id="7fa302b3-d504-49f6-aeaf-ea47ebb05ca0" class="bulleted-list"><li>Minima capacidad de control de errores y fliujo lo que reduce el cosdte de prodesamiento de las celdas.</li></ul></details></li></ul><ul id="7118d863-4a79-48ce-b650-bdc2da39c107" class="toggle"><li><details open=""><summary>Multiplexacion MDT</summary><figure id="2cb547dc-8e95-4a0d-9414-eb40b708c77b" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%204.png"><img style="width:675px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%204.png"/></a></figure><ul id="6b9137d7-1eb1-4f79-a7f1-55e23ba9a2ab" class="toggle"><li><details open=""><summary>Asincrona</summary><figure id="8fc88479-0e4a-4e17-9130-e12224916fbf" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%205.png"><img style="width:780px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%205.png"/></a></figure></details></li></ul></details></li></ul><ul id="d2551709-0aae-4dcc-9255-7b610a2b2a16" class="toggle"><li><details open=""><summary>Celda ATM</summary><figure id="a749b3e2-9583-4c42-9ba8-2d76275929d7" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%206.png"><img style="width:818px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%206.png"/></a></figure></details></li></ul><ul id="ff37750b-b135-4f6a-9019-3ac87cf64cc0" class="toggle"><li><details open=""><summary>Interfaz de la red ATM</summary><p id="92cf72e9-2270-49ee-bd29-21e672810955" class="">Los conmutadores ATM soportan dos tipos primarios de interfaces:</p><ul id="5539f428-e43f-4cb7-a8ca-39b908e4c734" class="bulleted-list"><li>UNI (User to Network Interface) - La interfaz UNI conecta sistemas finales ATM (Tales como servidores y routers a un conmutador ATM)</li></ul><ul id="0a11716e-3dd9-4c99-9c50-0771b5f14220" class="bulleted-list"><li>NNI (Network to Network Interface) - Conecta dos conmutadores ATM</li></ul></details></li></ul><ul id="088c4a40-4982-4083-9967-462adbdd6e35" class="toggle"><li><details open=""><summary>Niveles ATM</summary><figure id="d1a36983-a477-42c5-b038-e6cdd9cfc683" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%207.png"><img style="width:855px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%207.png"/></a></figure></details></li></ul><ul id="5aa3c8b5-8a33-4aea-a34b-899ba78fb6a1" class="toggle"><li><details open=""><summary>Nivel Fisico</summary><p id="a8968182-c4d7-46e5-b5df-d0c7c3e71c87" class="">Envio de datos por el medio fisico: codificacion y sincronizacion de señales, con una velocidad de transmision 155 / 622 Mbps, necesidad de especificar la estructura de transmision para el traporte de la carga util, el encvio directamente por fibra optica o par trenzado o sobre otro sistema portador y la capa fisica se subdivide : </p><ul id="4e470689-e94f-4872-86e7-da72df7de867" class="bulleted-list"><li>Subcapa PMD (Physical Madia Dependent) es equivalente a la capa fisica OSI - se especificacion del medio y esquema de cdificacion. Precisa sincronizacion que se consigue con el campo de control de errores de la cabecera HEC</li></ul><ul id="4235b7d1-6ca6-44a5-bb08-f95740a863e4" class="bulleted-list"><li>Subcapa TC (Transmision Convergence). Descompone en bits las celdas de la capa ATM y recompone en celsad los bits que recoge de la subcapa PMD. Realiza parte de las funcione que corresponden a la capa de enlace</li></ul></details></li></ul><ul id="ae078f67-cef6-4831-9c1b-be439ad4afa5" class="toggle"><li><details open=""><summary>Subnivel ATM</summary><p id="c0ed9beb-0d72-4979-b550-7c5bb614a9a0" class="">Define estructuras de las celdas y su transorte, constitute y termina los CV (multiplexacion u conmutacion del medio), realiza control de congestion, elimina las unidades recibidas con errores y equicale a una mezcla de la capa de enlace y la red</p></details></li></ul><ul id="540ede1a-37aa-4f89-ace7-6599a702880c" class="toggle"><li><details open=""><summary>Subnivel AAL</summary><p id="e2ece5cf-2cd0-48c1-8025-3a42ddaa5b91" class="">Permite transmitir protocolos no basados en ATM, las funciones son segmentacion y reensamblado, control de flujo y temporizacion.</p><p id="42d6ce58-8541-439e-978c-3a3fef4a1605" class="">El subnivel AAL se subdivide en :</p><ul id="03b392fa-7f95-47bd-babf-f08b18462986" class="bulleted-list"><li>Subcapa CS (Convergence Sublayer) - se ocupa de suministrar distintos tipos de servicios adecuados al tipo de trafico</li></ul><ul id="cd3b0e60-d238-45d2-9671-11e781e84deb" class="bulleted-list"><li>Subcapa SAR (Segmentacion an d Reassemby Sublayer) - se ocupa de dividir en celdas el paquete recibido de CS y de reensamblar en el receptor el paquete a partir de las celdas recibidas</li></ul><figure id="8b9fe3ee-6efb-4b10-8a0f-a44812897c20" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%208.png"><img style="width:798px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%208.png"/></a></figure><figure id="ab95ba1c-b58c-4a8f-9426-5de93c168a22" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%209.png"><img style="width:786px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%209.png"/></a></figure></details></li></ul><ul id="5a35f23d-f2be-48d8-8699-ea0e1ec42848" class="toggle"><li><details open=""><summary>Conexion logica ATM</summary><ul id="5b95374e-1536-4759-81e5-d1d01f030261" class="toggle"><li><details open=""><summary>Canal Virtual (VC)</summary><p id="44eac1f1-ccb0-421f-a1ab-518c59a25a1b" class="">Tubo unidireccional compuesto a partir de la concatenacion de una secuencia de elementos de conexion que permite el transmoporte secuencial e integral de celdas en unflujo full-duplex. La concatenacion de varios VC forman una conexion de cal virtual VCC y une dos usuaior finales (user-user, user-red o red-red), cada VC esta asociado a un unico identificador llamado VCI y las celdas ATM se trasnforman en la red por VC</p></details></li></ul><ul id="a2ce8bf1-8f8c-4369-8e98-91f89ac6209f" class="toggle"><li><details open=""><summary>Camino o ruta virtual (VP)</summary><p id="854e2027-d51b-417e-907b-fb87c3989ddf" class="">Agrupacion de VC con los mismos extremos de manera que todas las celdas trasnmitidas a traves de todas las VCC de unamisma VCP se conmutan conjuntamente. Cada VP esta asociado a un unico identificador llamado VPI</p></details></li></ul></details></li></ul><ul id="9a06254f-160e-4318-817f-567598527d4c" class="toggle"><li><details open=""><summary>Conmutacion ATM</summary><figure id="dd4a3f40-7fd1-43dc-9e36-b478ff074dc8" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%2010.png"><img style="width:714px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%2010.png"/></a></figure></details></li></ul><ul id="d805c062-4d3e-45a1-b415-95780e159f6e" class="toggle"><li><details open=""><summary>Categorias de servicios ATM</summary><figure id="7890686f-e7e3-4754-8918-477f480feaf3" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%2011.png"><img style="width:758px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%2011.png"/></a></figure></details></li></ul><ul id="769a5f4f-4416-400d-b867-4ca3a87c9517" class="toggle"><li><details open=""><summary>Parametros de conexion ATM</summary><figure id="d03af50b-1660-4bd5-bfb4-03bae7834e34" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%2012.png"><img style="width:766px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%2012.png"/></a></figure></details></li></ul><ul id="6b1b5a98-cd41-4fa6-9f7d-037321750113" class="toggle"><li><details open=""><summary>Categorias estandarizados de servicio ATM</summary><figure id="2cb88ed4-f508-47a8-9ed4-408cea5188cc" class="image"><a href="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%2013.png"><img style="width:663px" src="Q%20-%20Questions%20T3%20fe797ffaff964f37bfa735ea9043fc0c/Untitled%2013.png"/></a></figure></details></li></ul><p id="d2c500df-47b8-4f29-bd64-77d664965bc2" class="">
+</p></div></article></body></html>
