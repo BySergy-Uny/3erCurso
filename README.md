@@ -3,4 +3,4 @@ Repositorio del material docente del 3er Curso del Doble Grado de Ingeniería de
 
 Pages
 
-[Redes de computadores]: https://bysergy-uny.github.io/3erCurso/RC/
+[Redes de computadores]( https://bysergy-uny.github.io/3erCurso/RC/)
