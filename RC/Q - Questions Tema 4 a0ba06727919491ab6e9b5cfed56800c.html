@@ -1,0 +1,630 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Q - Questions Tema 4 </title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="91ede142-1a55-4d7c-a129-2be4449d7146" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">❓</span></div><h1 class="page-title">Q - Questions Tema 4 </h1></header><div class="page-body"><ul id="96bee08b-819f-4408-a117-1eb82b0b5474" class="toggle"><li><details open=""><summary>Elementos TCP/IP</summary><figure id="a0ba0672-7919-491a-b6e9-b5cfed56800c" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled.png"><img style="width:626px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled.png"/></a></figure></details></li></ul><ul id="a68ba3ec-fec3-4cf7-bca9-074c4005d1b9" class="toggle"><li><details open=""><summary>Encapsulación</summary><figure id="5dd1060f-bcb8-4ebd-9ae9-7d90e5826dbd" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%201.png"><img style="width:881px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%201.png"/></a></figure><figure id="c249754c-d378-4365-b89b-895dd072172e" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%202.png"><img style="width:907px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%202.png"/></a></figure></details></li></ul><ul id="a91c6a8a-9b38-4fac-8a5b-546ee3120204" class="toggle"><li><details open=""><summary>Interconexion de redes con TCP/IP</summary><figure id="5ac09f91-5d76-4a10-9c35-a2034aa2db52" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%203.png"><img style="width:802px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%203.png"/></a></figure></details></li></ul><ul id="97035e00-4725-4bc9-94ab-377bce362c01" class="toggle"><li><details open=""><summary>Direccionamiento IP</summary><figure id="f8b04988-38ba-4620-825e-487df5721c72" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%204.png"><img style="width:891px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%204.png"/></a></figure></details></li></ul><ul id="f173b7ba-70f9-49f9-95e1-86fcbeaca003" class="toggle"><li><details open=""><summary>Direccionamiento de transporte TCP/UDP</summary><figure id="af0985bc-fab8-4c19-a34e-ff6a23a9743c" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%205.png"><img style="width:777px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%205.png"/></a></figure></details></li></ul><ul id="86d2326a-75a5-4725-af57-5e95ad0b473a" class="toggle"><li><details open=""><summary>TSAP y NSAP</summary><ul id="ce44e800-5eb9-48c6-95e3-b9a2378b5594" class="bulleted-list"><li>TSAP, punto de acceso al servicio de nivel de transporte - puertos</li></ul><ul id="77a6d7dc-a516-4896-ae7a-288a24d7f856" class="bulleted-list"><li>NSAP, punto de acceso al nivel de red - direcciones IP</li></ul><figure id="370a03d5-9ce0-4476-b74b-53d855fbfc4e" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%206.png"><img style="width:598px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%206.png"/></a></figure></details></li></ul><ul id="b181e409-1ee4-4cd3-a3ec-d66793ad19ca" class="bulleted-list"><li>Concepto de Cliente/Servidor - visto en temas anteriores (puertos servicios 0-1023 y el 1024 para servidores)</li></ul><ul id="96c3d7e5-41fa-49c1-8033-b7816427a603" class="toggle"><li><details open=""><summary>Listado de las Capas propias del host</summary><ul id="d25b1c8f-674f-4dc4-aedb-6df8bf86fa0b" class="toggle"><li><details open=""><summary>Capa de aplicación </summary><p id="b40f486c-0d1b-40a9-a594-3d05e04ed828" class="">Interfaz de servicios finales, contiene toda la lógica necesaria para posibilitar las distintas aplicaciones de usuario, las aplicaciones pueden acceder a la capa de transporte por los puertos asignados y los protocolos que tiene son FTP, Telnet, WWW, DNS, ...</p></details></li></ul><ul id="9cf6ee57-6a58-46cd-9627-e3517589416a" class="toggle"><li><details open=""><summary>Capa de transporte (TCP, UDP)</summary><p id="9fe59b71-ed6b-4493-8c3c-938deb4dba6c" class="">Transferencia entre proceso de aplicación P2P, la identificación de transportes ser realiza mediante los puertos. Hay dos tipos de protocolos de transporte:</p><ul id="53bba43a-cc91-48c0-bff9-0d471702ca00" class="bulleted-list"><li>TCP (Transport control protocol) - orientado a conexiones y complejo</li></ul><ul id="16e526ff-38bc-4204-a653-adf1ed1fe599" class="bulleted-list"><li>UDP (User datagram protocol) - no orientado a conexión y más sencillo</li></ul><p id="1272a3a0-fe42-41e4-9a2b-da9aa79c4839" class="">
+</p></details></li></ul><ul id="944e3bbc-164f-4abb-9366-1cda846770e7" class="toggle"><li><details open=""><summary>Capa de internet</summary><p id="19fed3af-5c55-49a9-a994-ebbb4a9dfa8c" class="">Gestiona el movimiento de paquetes por la red, transferencia entre maquinas origen y destino, identificación mediante direcciones IP, no es muy fiable y no está orientada a conexión, las funciones que realiza son el encaminamiento y la fragmentación ,y comunica de los errores con ICMP y SNMP</p></details></li></ul><ul id="08130084-5231-4b05-bffe-564a4fbaccf3" class="toggle"><li><details open=""><summary>Capa de interfaz de red </summary><p id="a9acaab2-1f54-497c-b0fd-fd9e2fc36e3d" class="">Proporciona los drivers que interactúan con los componentes HW para adaptar y configurar el nivel físico, tiene funciones de nivel físico y enlace.</p></details></li></ul></details></li></ul><ul id="1791a8bf-2d6d-465a-b3f9-d772aeb71369" class="toggle"><li><details open=""><summary>Capa de interfaz de red</summary><ul id="fbd312e6-ccfb-49e3-b4f6-d3472cd1b281" class="toggle"><li><details open=""><summary>Necesidad de la capa de interfaz de red</summary><p id="3b4b5be6-2abe-414e-b761-e489a4e6ec8f" class="">El uso de red provoca que sea necesario la utilización de niveles intermedios que conecten el IP con las subredes. La interfaz de red actúa como interfaz de conexión entre la red de datos y el computador, cada una de ellas tienen una dirección IP.</p></details></li></ul><ul id="76c20e5a-21c6-42cd-9c83-9bf10fc5a661" class="toggle"><li><details open=""><summary>Datagrama</summary><figure id="3a0f9ddd-2f06-4d8a-973e-f15fb374dbd8" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%207.png"><img style="width:890px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%207.png"/></a></figure></details></li></ul><ul id="ba565999-33c8-41c0-b9e0-781215e62d78" class="toggle"><li><details open=""><summary>IP sobre Ethernet</summary><p id="681ead54-c970-4f86-8173-031683d4f24d" class="">Las tarjetas de red tienen una MAC unica en el HW, el campo longitud/Tipo de la trama MAC muestra la longitud de la trama y el tipo de protocolo:</p><ul id="21c7f151-3732-4dea-ae52-bc53eab8326e" class="bulleted-list"><li>0800H para IP</li></ul><ul id="0ab9d831-cf76-4f35-951d-bbd28b1d3d22" class="bulleted-list"><li>0806H para ARP</li></ul><p id="a17bfb2a-340e-4a98-b6cf-251844203cbb" class="">Toda máquina que ejecute una aplicación TCP/IP y este escuchando la red comprobara el campo L/T, una estación que ejecute otro protocolo dará la trama anterior como invalida</p></details></li></ul><ul id="c5493a31-3dcf-46c4-a404-2d173e7a21e5" class="toggle"><li><details open=""><summary>Problema de resolución de las direcciones IP</summary><ul id="1e000910-b187-49ad-b295-f964f64e99d6" class="toggle"><li><details open=""><summary>Problema</summary><p id="c60ae2c6-42f7-4cd5-ae97-d76f8cf2de90" class="">Las direcciones IP son abstracciones que da la capa IP, el HW de la red física no sabe localizar por IP, se debe de traducir a dirección MAC equivalente.</p></details></li></ul><ul id="8fe201c1-9f78-42f9-a5d7-fe0e64e9688e" class="toggle"><li><details open=""><summary>Mediante tablas estáticas</summary><figure id="9e534f02-6d16-4e6b-9fa0-6194bb216217" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%208.png"><img style="width:820px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%208.png"/></a></figure></details></li></ul><ul id="9f400ce9-9e69-4d70-a6da-22f93ebd98d0" class="toggle"><li><details open=""><summary>Mediante tablas dinámicas</summary><figure id="b9a13647-fd9e-4d59-93c9-5082f1bb09f9" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%209.png"><img style="width:876px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%209.png"/></a></figure></details></li></ul></details></li></ul><ul id="7763e814-a97d-42ef-a5fb-7d640b367677" class="toggle"><li><details open=""><summary>Protocolo ARP</summary><ul id="7902826e-3842-4ec6-b0a3-fb56c69094cd" class="toggle"><li><details open=""><summary>Definición</summary><p id="d554df85-679f-4b38-aa9a-b00f4fb44b9b" class="">El protocolo ARP permite la configuración automática de correspondencias de direcciones MAC y direcciones IP. Su funcionamiento es el siguiente : </p><p id="2898d05d-7b67-4062-877e-5ba4be64f8a2" class="">El host busca su propia cache ARP local una dirección coincidente para la IP de otro host, en el caso de que no encuentre la correspondencia envía una trama ARP request preguntando por la dirección IP, el otro host sera el único que conteste enviando un paquete ARP indicando dirección IP y dirección Ethernet, las direcciones ser mantendrán cierto tiempo en la cache ARP.</p></details></li></ul><ul id="27f0405b-8033-435d-aaa2-3417c3e5d374" class="toggle"><li><details open=""><summary>Formato</summary><figure id="45309d16-3e1d-4298-80ae-10e9df68a6c2" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2010.png"><img style="width:820px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2010.png"/></a></figure></details></li></ul><ul id="549fd2b5-22c1-48dc-868a-fa9fcc153f8c" class="bulleted-list"><li>Concepto de cache ARP</li></ul></details></li></ul></details></li></ul><ul id="fb668695-cb9f-44dd-9b45-400210f89b7c" class="toggle"><li><details open=""><summary>Capa IP</summary><ul id="9f306f0f-6128-4ef4-ada6-ae3884aa28b1" class="toggle"><li><details open=""><summary>Direccionamiento IPv4</summary><p id="689d5c1a-834a-427d-97c9-cbf31bcb1a13" class="">Para proporcionar un direccionamiento uniforme en internet, el estándar IP define un esquema de direccionamiento abstract que asigna a cada interfaz de red una dirección de protocolo IP unica. La dirección de internet IPv4 es de 32 bits único, lo cual da un total de 4000 millones de direcciones posibles, el esquema de direccionamiento IP es independiente del MAC, en los paquetes IP las compos de destino y origen están en la cabecera y cada uno contiene 32 bits.</p></details></li></ul><ul id="2e03303d-3627-466e-9969-a1a9d8d9fafb" class="toggle"><li><details open=""><summary>Características del esquema de direccionamiento </summary><p id="b4a14637-6d98-4c0e-8183-1a03074c80ab" class="">Las direcciones IP están divididas jerárquicamente en prefijo y sufijo</p><ul id="10a3802f-c528-42fe-864d-e69ff73c2744" class="bulleted-list"><li>El prefijo identifica la red y no puede haber dos redes en el mismo prefijo</li></ul><ul id="ef833b14-fba8-4e94-9800-40d9bbbeb1c0" class="bulleted-list"><li>El sufijo identifica el host y no puede haber dos dispositivos con el mismo sufijo</li></ul><ul id="30ade4f8-67dc-44f2-aaca-73daca4559df" class="bulleted-list"><li>Las dir. IP se representan con 4 números y notación punto decimal</li></ul></details></li></ul><ul id="ceca4491-6ec4-47fa-b4ff-dc9571a28e38" class="toggle"><li><details open=""><summary>Direccionamiento Clases IP</summary><figure id="862f2e38-8b65-4705-a3a9-a89a45344d61" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2011.png"><img style="width:809px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2011.png"/></a></figure><figure id="43dec53a-9e47-4356-af7f-844c316e40cf" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2012.png"><img style="width:816px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2012.png"/></a></figure><figure id="fcedabd7-3cba-4c26-a786-89239b5ae2df" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2013.png"><img style="width:837px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2013.png"/></a></figure><figure id="91d2d77c-481d-4b55-a788-ce3980ce971d" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2014.png"><img style="width:822px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2014.png"/></a></figure><figure id="c952f24d-ab0a-41df-9b12-56c94887c2b1" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2015.png"><img style="width:817px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2015.png"/></a></figure><figure id="1794a7ea-e020-46cb-b78a-6e6f9941fb80" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2016.png"><img style="width:794px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2016.png"/></a></figure></details></li></ul><ul id="787a7e10-99e4-4cb2-85d8-027bf69b8c17" class="toggle"><li><details open=""><summary>Direccionamiento sin clase, CIRD</summary><ul id="d798415b-fc2b-45da-aa8b-bec78eaa977b" class="toggle"><li><details open=""><summary>Concepto</summary><p id="35f996d4-2d63-442b-9c70-360cbade03ff" class="">Con el crecimiento de internet se comprobó que el direccionamiento con clases era poco flexible y eficiente para ello se creó el direccionamiento sin clases que se basa en el cambio del concepto de clase por el de prefijo de red permitiendo definir bloques de direcciones de cualquier tamaño y así los host utilizaban este prefijo para determinar el punto de division entre número de re y número de host</p></details></li></ul><ul id="cdf148bf-cad9-49e4-a341-47bbcb355f5b" class="toggle"><li><details open=""><summary>Concepto de mascara</summary><figure id="bccab351-6890-45a5-a548-1613aa114b23" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2017.png"><img style="width:766px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2017.png"/></a></figure></details></li></ul><ul id="81502abd-027d-4ef0-b4e4-3e97386ae38e" class="toggle"><li><details open=""><summary>Notación CIDR</summary><figure id="64b15d90-bfdd-4f4e-b86f-2d30ab0d9d20" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2018.png"><img style="width:794px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2018.png"/></a></figure></details></li></ul><ul id="72cb49c0-102f-48bb-a994-e28fba4b4519" class="toggle"><li><details open=""><summary>Subredes</summary><ul id="fad574db-0a3a-40d8-9bd0-f7c4fbb51046" class="toggle"><li><details open=""><summary>Definición</summary><p id="d4b705e9-3996-4f5a-ab75-301c1b6c5b40" class="">Las redes físicas se pueden dividir en varias redes más pequeñas o subredes tomando bits de la parte del host de la dir. Los routers marcan los límites entre las subredes, definiendo una máscara en la que están a 1 los bits de las red-subred (prefijo extendido) y 0 a los del host. Las subredes mejoran la asignación de dirs. y encaminamiento.</p><figure id="106479e4-e481-46ab-9884-b563077b1c29" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2019.png"><img style="width:543px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2019.png"/></a></figure></details></li></ul><ul id="9af32fc7-44e2-425a-98f8-ad7ee9fbd3b8" class="toggle"><li><details open=""><summary>Subredes caso de estudio</summary><figure id="0bd99fdf-434d-42cb-af92-1ad6d2207f79" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2020.png"><img style="width:821px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2020.png"/></a></figure><figure id="d508ac2a-1fc0-480e-ad18-9d689e10dee2" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2021.png"><img style="width:728px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2021.png"/></a></figure></details></li></ul><ul id="54317e2d-fcf2-42df-b2a5-27282e3a0450" class="toggle"><li><details open=""><summary>División de subredes de tamaño variable, VLSM</summary><ul id="614d18b5-a9f7-492e-8a44-d2bfb95f20e4" class="toggle"><li><details open=""><summary>Concepto</summary><p id="3c476221-2856-4c7c-95c5-43f407d7b563" class="">La subdivision de la red (Subneteo) de tamaño variable es otra de las soluciones adoptadas para que no sufra de agotamiento de direcciones IP, como el CIDR, NAT y direcciones IP privada. El CIDR divide de forma homogénea los espacios de memoria, pero se desperdician direcciones. La técnica VLSM puede dividir red en subredes de diferentes tamaños, utilizando máscaras de subred de tamaño variable.</p><p id="8a80c072-9942-436d-a174-79b1d7db0f53" class="">Su funcionamiento es tomar una red y dividir subredes fijas, luego se toma una de las subredes y se vuelve a dividir, tomando bots prestados de la porción de hosts, ajustando a la cantidad de hosts requeridos por cada segmento de la red.</p></details></li></ul><ul id="9de991be-57dd-455b-aca6-eb85a9c79ea0" class="toggle"><li><details open=""><summary>Casos de estudio</summary><figure id="f24133f2-6815-4850-b4a0-38762c0a0b53" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2022.png"><img style="width:917px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2022.png"/></a></figure><figure id="47d91538-83b4-49b9-b406-e4ae8a69e93d" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2023.png"><img style="width:733px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2023.png"/></a></figure></details></li></ul></details></li></ul><ul id="bfd0d4d6-1981-463f-a833-3da9ff29af54" class="toggle"><li><details open=""><summary>Agregación de rutas - superredes (Supernetting)</summary><ul id="9755921f-0833-4d05-a102-81332ccdfd2a" class="toggle"><li><details open=""><summary>Concepto </summary><p id="8689ec6c-101b-4aa6-a80e-2764ec73a30c" class="">El problema de lo anterior es la ineficiencia de la asignación de rangos IP y evitar la sobrecarga de las tablas de encaminamiento de los routers. Por lo que las superredes surgen para la prevención, estas redes están formados por la combinación de dos o más redes contiguas con un prefijo CIDR, el prefijo de enrutado la superred comprende los prefijos de las redes que la constituye. La técnica consiste en tomar dos o más bloques de direcciones de red numéricamente contiguas y se consolidan en una sola dirección de red más grande con una máscara más corta</p></details></li></ul><ul id="88a2cb0e-147f-4a7b-853e-bb06b99ad925" class="toggle"><li><details open=""><summary>Casos de estudio</summary><figure id="01eb63fc-7ef0-48c9-b303-7005464b3783" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2024.png"><img style="width:914px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2024.png"/></a></figure><figure id="959d0339-b315-4901-a94f-0013b42fd490" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2025.png"><img style="width:604px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2025.png"/></a></figure></details></li></ul></details></li></ul><ul id="0956706e-0379-442b-8adf-66d3d88138db" class="toggle"><li><details open=""><summary>Direcciones IP privada</summary><figure id="2cb19561-d483-4219-8c16-3a69b3c1e8a9" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2026.png"><img style="width:805px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2026.png"/></a></figure></details></li></ul></details></li></ul></details></li></ul><ul id="794b0caa-db3b-48dd-9f49-c35296bcdce0" class="toggle"><li><details open=""><summary>NAT, Network Address Translation</summary><figure id="a9b87468-85a8-4a4a-9a0f-c3b64679c64d" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2027.png"><img style="width:912px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2027.png"/></a></figure><figure id="d859912f-05e8-4172-a9a5-4ffaa591023d" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2028.png"><img style="width:877px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2028.png"/></a></figure></details></li></ul><ul id="662a49c7-5e74-4e4c-8ca7-e98f332d155c" class="toggle"><li><details open=""><summary>DHCP, Dynamic Host Configuración Protocolo</summary><figure id="da0b07dd-c823-4d9f-a87b-93f19f764c8d" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2029.png"><img style="width:865px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2029.png"/></a></figure><figure id="9b7ab3e6-47eb-461b-b5cd-56afde3459e9" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2030.png"><img style="width:911px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2030.png"/></a></figure></details></li></ul><ul id="de276286-e07b-4287-9709-0a50b07d7ce9" class="toggle"><li><details open=""><summary>Direccionamiento IPv6</summary><ul id="5f55bc53-c748-44c8-9089-d547e7b934a0" class="toggle"><li><details open=""><summary>Motivaciones</summary><p id="5ea9e1ec-2c45-4140-8f5b-377d3dbdc6f5" class="">Debido al agotamiento de las direcciones IPv4 y las nuevas aplicaciones que exigían funcionalidades que no soportaba se creó IPv6 para posibilitar los paquetes superiores a 64Kb o jumbogramas que oscilan hasta los 4GB.</p></details></li></ul><ul id="774c3070-9864-4762-a642-c13b6dbed28a" class="toggle"><li><details open=""><summary>Direccionamiento</summary><figure id="ec19e576-67e6-4ec6-9428-3c048661ab23" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2031.png"><img style="width:808px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2031.png"/></a></figure><ul id="e7a96afd-e2ae-4cb7-bbef-ac4e5dd2f679" class="toggle"><li><details open=""><summary>Asignación</summary><figure id="8b24ce20-f77d-4b40-abec-d0c5f34027a6" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2032.png"><img style="width:735px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2032.png"/></a></figure></details></li></ul><ul id="cf6dabd3-d8ab-4746-9574-596354dc4521" class="toggle"><li><details open=""><summary>Notación</summary><figure id="4b946bf3-9474-4f02-9389-03a12c4c514d" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2033.png"><img style="width:830px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2033.png"/></a></figure></details></li></ul><ul id="edae9be9-53cb-4f1e-956e-6a15082173b2" class="toggle"><li><details open=""><summary>Tipos de direccionamientos </summary><ul id="7a32d4b4-2304-4002-ad63-5dee99a12e55" class="bulleted-list"><li>Unicast - identifican a una sola interfaz, el paquete se envía solo a una interfaz</li></ul><ul id="5b7044ec-444f-472f-be2f-bf012e881cbc" class="bulleted-list"><li>Anycast - identifica a un conjunto de interfaces, asignándoles una dirección de grupo. Cuando se envía un paquete a ese grupo solo lo recibe un miembro el host de menor coste.</li></ul><ul id="8408d2cc-901d-487f-9728-bab1b7964320" class="bulleted-list"><li>Multicast - identifica a un grupo de interfaces, cuando se envía un paquete es entregado a todas las interfaces del grupo identificados con esa dir.</li></ul><ul id="31f3bbe2-c6e9-4bb8-91ca-f28b81523e7e" class="bulleted-list"><li>Broadcast - no se implementa</li></ul></details></li></ul></details></li></ul></details></li></ul><ul id="d87a9409-685f-47dd-9c71-4101e64e102a" class="toggle"><li><details open=""><summary>Datagrama IP</summary><ul id="9760d3ef-dcb1-4097-98de-d54e34e95fb7" class="toggle"><li><details open=""><summary>Nivel IP</summary><figure id="d0a80c75-93a3-48ab-ba0f-7b069017cdcd" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2034.png"><img style="width:675px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2034.png"/></a></figure></details></li></ul><ul id="bd3f2083-1124-4ddb-a029-c0548e067092" class="toggle"><li><details open=""><summary>Funciones de la capa IP </summary><p id="079c5369-4436-4395-990e-6bd388235e08" class="">Ofrece una comunicación no orientada a conexión P2P, independientemente de la red y sin garantía de llegada de paquetes, las principales funciones son direccionamiento lógico (dirección IP), almacenamiento y reenvío de datagramas, segmentación y reensamblado.</p></details></li></ul><ul id="319998b5-af93-4266-85cc-bb0189b929d4" class="toggle"><li><details open=""><summary>Datagrama IPv4</summary><figure id="cb233c1c-2f9b-4432-b236-69ca1756b0db" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2035.png"><img style="width:802px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2035.png"/></a></figure><figure id="284fed3d-20eb-4118-b791-0de6b1a8c765" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2036.png"><img style="width:788px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2036.png"/></a></figure><figure id="8aa52fb5-32c7-4807-b041-e34c59f4dfa2" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2037.png"><img style="width:798px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2037.png"/></a></figure><figure id="01e288a8-ca51-4c8e-8b0d-24b09923d896" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2038.png"><img style="width:916px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2038.png"/></a></figure><figure id="deeb103d-ae8b-4ca7-8013-d4b2eba56f98" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2039.png"><img style="width:813px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2039.png"/></a></figure><figure id="6a85a443-fb20-415c-b416-391443c09e30" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2040.png"><img style="width:769px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2040.png"/></a></figure><figure id="8cbd6f9e-535c-4e2c-bc9b-5a8083af26c4" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2041.png"><img style="width:857px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2041.png"/></a></figure></details></li></ul><p id="9e8d8f4e-11ae-454e-bd7d-2d127d25ba3d" class="">
+</p></details></li></ul></details></li></ul><ul id="3546ae48-5102-43dd-b7eb-b4d92bec7572" class="toggle"><li><details open=""><summary>Protocolo ICMP</summary><p id="3e18ec68-96e6-4c6f-a399-b0416cf87c01" class="">Los protocolos IP son de transferencia de datos y están acompañados por otros protocolos de uso a nivel de red como ARP, DHCP e ICMP.</p><p id="21c3e335-1eb1-4bf7-9739-945d67e7771a" class="">El ICMP, Internet Control Messages Protocol se utiliza para la gestion de mensajes de error y otras condiciones que requieran atención. Estos mensajes se activan por el nivel IP o protocolos de nivel superior (UDP, TCP), son generados por el host o routers que detectan el problema o situación extraordinaria y dirigidos al host o router que aparece en el campo dirección origen del datagrama que causo el problema, estos mensajes viajan como datagramas IP, sujetos a las reglas de los routers como cualquier datagrama y ICMP usa IP como si fuera un protocolo de nivel superior, pero implementados con el módulo IP.</p><ul id="54e8aac3-0610-42e5-8af7-3e375d3263b1" class="toggle"><li><details open=""><summary>Tipos de mensajes</summary><figure id="24eb4a77-42d1-4d42-91a0-562d008125b5" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2042.png"><img style="width:537px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2042.png"/></a></figure></details></li></ul><ul id="b2668820-88cb-45bb-acc7-8bc780e43110" class="toggle"><li><details open=""><summary>Formato</summary><figure id="6304c332-0c01-4306-8929-276c3dbfd5d2" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2043.png"><img style="width:833px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2043.png"/></a></figure></details></li></ul><ul id="dcfba5cd-a4e9-4d69-94bd-a4cb3b6fef77" class="toggle"><li><details open=""><summary>Mensajes de error</summary><ul id="39e9a44e-5629-451b-9b1c-4f3a1d791101" class="bulleted-list"><li>Destination unreachable, destino inalcanzable: tipo 3 - el campo de datos contiene la cabecera IP y los primeros 8 bytes de la carga util del datagrama original. Un router puede emitir este mensaje si no se puede entregar el datagrama en su destino porque el router se encuentra con un datagrama con el bit DF=1 y no cabe en la MTU de la red o el router no se encuentran en ninguna tabla de las rutas por las que pueda llegar a la dirección de destino del datagrama.</li></ul><ul id="edb258b0-fefc-4441-a154-e3a85d62c302" class="bulleted-list"><li>Source Quench, supresión de origen: tipo 4 - aviso de descarte por congestion, permite a los routers solicitar reducción de tráfico por los hosts en caso de congestion</li></ul><ul id="337b07b5-a59a-4fb4-a716-c9f8349600c0" class="bulleted-list"><li>Time exceeded for datagram, tipo 11 - aviso de un descarte por exceso de tiempo en el sistema (TLL=0) no se usan los cuatro bytes finales de la cabecera, el campo de datos contiene la cabecera IP y los 8 primeros B de la carga util del datagrama original.</li></ul><ul id="b0f5f517-d275-47c6-87c3-93ce28dbf1db" class="bulleted-list"><li>Redirect, tipo 5 - se utiliza para alertar al host emisor cuando sospecha que un paquete este mas encaminado, los 4bytes finales de la cabecera contienen la dirección del router, el campo dato contiene la cab IP y los primero 8 byte de la carga util del datagrama original</li></ul></details></li></ul><ul id="3cb8e626-06a0-4ea2-9a73-dbd6ee8b8a5f" class="toggle"><li><details open=""><summary>Mensajes diagnostico</summary><ul id="6488b4eb-1da9-4b49-8b55-a2bf0a7d7575" class="toggle"><li><details open=""><summary>Ping</summary><figure id="03d7214c-ce75-46ad-875f-05fb0a2c21c5" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2044.png"><img style="width:879px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2044.png"/></a></figure></details></li></ul><ul id="22cfc02b-48fc-4cda-ac6f-e69923a50e9f" class="toggle"><li><details open=""><summary>Traceroute</summary><figure id="03ed4878-6d71-4a92-8581-cf2140cf2151" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2045.png"><img style="width:744px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2045.png"/></a></figure></details></li></ul></details></li></ul></details></li></ul><ul id="9f0f2cf1-46f0-4883-b1f6-40b9a368f09a" class="toggle"><li><details open=""><summary>Encaminamiento</summary><ul id="99c1983a-0088-4c9d-9c75-5aa594165c33" class="toggle"><li><details open=""><summary>Definición encaminamiento IP</summary><p id="2da9b6c2-a32d-4c85-bbf2-62aa5da01be3" class="">El encaminamiento IP es el proceso de reenviar un paquete basado en la dirección de destino. Los métodos de encaminamiento son:</p><ul id="af616b8b-1234-48ab-a9e4-29220ceceea1" class="bulleted-list"><li>Estático o no adaptativo - no tiene en cuenta el estado de la red, existe una ruta permanente origen-destino</li></ul><ul id="97cdd3ae-e7b5-46d1-b84f-4dcd6d333015" class="bulleted-list"><li>Dinámico o adaptativo - las decisiones cambian a medida de las condiciones, creadas y mantenidas automáticamente por protocolos de routing</li></ul><figure id="767ded58-efda-4372-967d-2a5010a7bc39" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2046.png"><img style="width:561px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2046.png"/></a></figure></details></li></ul><ul id="9d8cef78-8cc4-4a68-bf82-7b6c29595889" class="toggle"><li><details open=""><summary>Concepto de ruta</summary><p id="89cc86fa-27e6-402b-a279-d8c6b8f73b8f" class="">Se establece gracias a las diferentes tablas de encaminamiento de los distintos dispositivos (routers) que intervienen en la comunicación (a nivel IP). Tipos de rutas :</p><ul id="ff1cbd2a-51a8-41ac-b8c9-fb71a932749c" class="bulleted-list"><li>Directas - host a host se comunican entre si sin necesidad de un dispositivo intermedio de la capa de red</li></ul><ul id="5e2c876e-17a4-431a-9c83-f8d928e32c55" class="bulleted-list"><li>Indirectas - a traves de uno o más routers se establece salto a salto</li></ul></details></li></ul><ul id="7341b7c3-5152-4b6a-aa6c-74ffe3d2e1d5" class="toggle"><li><details open=""><summary>Tablas de encaminamiento</summary><figure id="78f2ffb6-5a7d-431e-8544-55d802092970" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2047.png"><img style="width:827px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2047.png"/></a></figure></details></li></ul><ul id="25f7fc56-d1ee-44a0-ac4b-a270f597eed0" class="toggle"><li><details open=""><summary>Tipos de casos que se pueden dar</summary><figure id="ff015875-f3ff-4e76-b9b0-6114679b6623" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2048.png"><img style="width:790px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2048.png"/></a></figure><figure id="0c889ac0-c153-4213-967c-79ca3b10f466" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2049.png"><img style="width:800px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2049.png"/></a></figure><figure id="4380a31c-c62e-4e3d-83b2-85aee77d4ab4" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2050.png"><img style="width:751px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2050.png"/></a></figure><figure id="fb93b96a-6ba1-48d2-9b12-3a0f908fb5e0" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2051.png"><img style="width:769px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2051.png"/></a></figure><figure id="5f64733b-1f11-42a8-810f-c0bf880ce3b3" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2052.png"><img style="width:907px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2052.png"/></a></figure><figure id="d672f0e1-330b-4215-8a90-33e8cc10916e" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2053.png"><img style="width:852px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2053.png"/></a></figure></details></li></ul><ul id="7e4646cd-805b-4f66-bf8c-2fd3783fb56b" class="toggle"><li><details open=""><summary>Casos de estudio</summary><figure id="603349de-1aed-4e89-8584-ec59e2a1d2b4" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2054.png"><img style="width:809px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2054.png"/></a></figure><figure id="ac11dc7d-030c-40c8-874f-8da7e663dc3a" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2055.png"><img style="width:845px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2055.png"/></a></figure><figure id="5050b68a-edd3-4ef4-a9b1-9c656db55aac" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2056.png"><img style="width:773px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2056.png"/></a></figure><figure id="3ee14a25-c1c1-487f-94a3-3f590711b55a" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2057.png"><img style="width:922px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2057.png"/></a></figure><figure id="90cdd0e9-37a7-4bf3-b8cc-2f15b5ab0fb6" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2058.png"><img style="width:848px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2058.png"/></a></figure><figure id="e74a1263-bac0-4562-936d-cd84fdcdbeb4" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2059.png"><img style="width:878px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2059.png"/></a></figure></details></li></ul></details></li></ul><ul id="95870b56-8193-4ca6-b326-5be6672c0a5b" class="toggle"><li><details open=""><summary>Capa de transporte</summary><ul id="0b735dbb-41ce-43fa-b5af-41586e3d59aa" class="toggle"><li><details open=""><summary>Introducción</summary><figure id="3a5c24ec-bb85-4d00-bae9-b4ba711cc146" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2060.png"><img style="width:773px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2060.png"/></a></figure></details></li></ul><ul id="cd73d00e-06f5-4acd-8326-2cb95e2b2d60" class="toggle"><li><details open=""><summary>TCP vs UDP</summary><figure id="c158c04c-5dfb-40d5-bfac-f7002f132b59" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2061.png"><img style="width:635px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2061.png"/></a></figure><figure id="683df19e-efe2-446d-a6de-e825c580b4a2" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2062.png"><img style="width:822px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2062.png"/></a></figure><figure id="7b4b3822-dac0-44b8-99f1-e443216aa7c7" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2063.png"><img style="width:866px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2063.png"/></a></figure></details></li></ul><ul id="3703b71d-e301-4a6c-bb19-aa2d774f7074" class="toggle"><li><details open=""><summary>Puertos bien-conocidos</summary><figure id="4354311e-a238-4eb0-9cc7-92be18bbd699" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2064.png"><img style="width:781px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2064.png"/></a></figure></details></li></ul><ul id="cc1ca3ec-f428-4a4d-89cc-5055db1f80a0" class="toggle"><li><details open=""><summary>Formato, transferencia UDP</summary><figure id="6c6f9674-5c9d-4a98-a329-e37aaea13be5" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2065.png"><img style="width:857px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2065.png"/></a></figure><figure id="ff3835b5-30dd-4fd7-882d-460829177add" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2066.png"><img style="width:811px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2066.png"/></a></figure></details></li></ul><ul id="9d380f43-bf7d-4d3d-8843-ea6b64f426ad" class="toggle"><li><details open=""><summary>Protocolo TCP, formato, transferencia TCP</summary><figure id="203df32e-4c51-4810-93ee-2804aa9b947c" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2067.png"><img style="width:831px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2067.png"/></a></figure><figure id="5a58ac02-8985-41a9-920b-24ccdc74bcaa" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2068.png"><img style="width:749px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2068.png"/></a></figure><figure id="96c45112-0591-4943-a2c4-ebaa9012c2a6" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2069.png"><img style="width:916px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2069.png"/></a></figure></details></li></ul><ul id="58620d34-a7e9-42b0-8932-fc2b59bfdd21" class="toggle"><li><details open=""><summary>Servicios TCP</summary><figure id="f79b9657-f8e6-45c5-8b37-18e08e876de9" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2070.png"><img style="width:597px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2070.png"/></a></figure><figure id="ba725876-53cc-4378-aba7-fff7cf04c397" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2071.png"><img style="width:870px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2071.png"/></a></figure></details></li></ul><ul id="b23a2ba1-cb95-4ff5-a894-86dd52774d74" class="toggle"><li><details open=""><summary>Transferencia de datos</summary><figure id="b04d62a7-ac3a-462f-af38-748cf6f65761" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2072.png"><img style="width:798px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2072.png"/></a></figure><figure id="ee1aefe2-5ea0-4483-bef5-077c45879195" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2073.png"><img style="width:762px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2073.png"/></a></figure><figure id="8dd0b6ed-9566-4d5c-97a4-b621ee8ebc1d" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2074.png"><img style="width:755px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2074.png"/></a></figure><figure id="4d960bbe-9a25-48df-9340-1074264c81fa" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2075.png"><img style="width:907px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2075.png"/></a></figure><figure id="549a2fa0-b3bc-440d-a03e-34bc5aa0f8b0" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2076.png"><img style="width:853px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2076.png"/></a></figure><figure id="2a59c371-28f2-497e-9a1a-a439facfc916" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2077.png"><img style="width:925px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2077.png"/></a></figure><figure id="2172292c-cbf6-4ae9-8226-892397be1013" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2078.png"><img style="width:877px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2078.png"/></a></figure><figure id="892435b7-bd73-4fd4-ae51-c8f80d346d2c" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2079.png"><img style="width:902px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2079.png"/></a></figure><figure id="16464660-5e89-491a-9ca6-16618cb5bdff" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2080.png"><img style="width:865px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2080.png"/></a></figure><figure id="4adaa9fd-bc55-4ab2-902f-d6aae17bd7e6" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2081.png"><img style="width:768px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2081.png"/></a></figure><figure id="57e51527-213e-4228-824e-71a6ecda2480" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2082.png"><img style="width:850px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2082.png"/></a></figure><figure id="4e2ee6ff-9b82-4cfd-96d8-d6e9002d93ae" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2083.png"><img style="width:775px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2083.png"/></a></figure><figure id="62e386b2-539e-4584-b085-cf93ff68a3f9" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2084.png"><img style="width:838px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2084.png"/></a></figure><figure id="21eb6770-6653-4618-9252-876a6028c79e" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2085.png"><img style="width:890px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2085.png"/></a></figure><figure id="03a380db-94d0-4ab9-b4cf-3eff7a06ddf6" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2086.png"><img style="width:865px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2086.png"/></a></figure><figure id="ca290843-3d1c-423b-836e-204e7a42e265" class="image"><a href="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2087.png"><img style="width:886px" src="Q%20-%20Questions%20Tema%204%20a0ba06727919491ab6e9b5cfed56800c/Untitled%2087.png"/></a></figure></details></li></ul></details></li></ul><p id="dca2ed1e-5b9b-45f1-808e-310eca4774c8" class="">
+</p></div></article></body></html>

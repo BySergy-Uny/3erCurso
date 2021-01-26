@@ -1,0 +1,634 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Q - Questions Tema 2 </title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0ea0b12d-1073-46f6-8f52-2c92dd64d93d" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">❓</span></div><h1 class="page-title">Q - Questions Tema 2 </h1></header><div class="page-body"><h2 id="2cb3ed7a-adb9-4d01-a703-072c66abcc28" class="">LANs Cableadas </h2><h3 id="f5d266a9-9022-48ee-b893-87c1746371d5" class="">Pila de preguntas I</h3><ul id="15729622-81bd-47d3-b35c-d42296abb689" class="toggle"><li><details open=""><summary>Concepto de red de area local</summary><p id="d61c348f-4e71-42b1-b785-473a338e24fb" class="">Las redes de area local, LANs, son redes que estan acotadas a una superficie pequeña como pudiera ser una casa, edificio o una localidad geografica. Los tipos de redes que existen de este tipo son las punto a punto o las multipunto estas ultimas son las mas utilizadas como red difusora. Las redes LAN son muchos mas rapidas que las redes WAN.</p></details></li></ul><ul id="79a847e0-b186-4d8b-ae21-14c6e96fe9d5" class="toggle"><li><details open=""><summary>Modos de caracterización</summary><ul id="52d61b13-5124-458b-90b6-ccdebfd85423" class="bulleted-list"><li>Topologia - como se disponen los enlaces y nodos de la red</li></ul><ul id="9bfc9a7d-d254-407a-838b-5286f74f1e9e" class="bulleted-list"><li>Medio de transmision - tipo de conexiones fisicas entre las distintas estaciones o equipos</li></ul><ul id="d20401e6-8f96-4aed-aa67-3b8084c9eec2" class="bulleted-list"><li>Control de acceso al medio - modo de acceso de las estaciones al medio compartido </li></ul></details></li></ul><ul id="17cd1eb4-5a46-4ca2-ac63-63911449d528" class="toggle"><li><details open=""><summary>Red Punto a Punto P2P</summary><p id="df110564-3969-421c-a961-bc6e699571dc" class="">Las redes punto a punto se caracterizan por estar enlazados los equipos por pares y se alternan los roles de cliente-servidor. Las desventajas son que el fallo de un nodo en la red puede provocar el fallo de toda la red y el alto numeo de enlaces provoca que sea bastante costosa.</p><p id="820c43be-49c6-4dcd-9f1c-5331ad384bd5" class="">Formula para ver que numero de enlaces se necesita:</p><p id="0ed59d76-8e81-40a5-9b00-76d055111a20" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>m</mi><mo separator="true">,</mo><mn>2</mn></mrow></msub><mo>=</mo><mi>m</mi><mo stretchy="false">!</mo><mi mathvariant="normal">/</mi><mn>2</mn><mo stretchy="false">!</mo><mo stretchy="false">(</mo><mi>m</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo stretchy="false">!</mo></mrow><annotation encoding="application/x-tex">C_{m,2} = m! / 2!(m-2)!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mpunct mtight">,</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mclose">!</span><span class="mord">/</span><span class="mord">2</span><span class="mclose">!</span><span class="mopen">(</span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mclose">)</span><span class="mclose">!</span></span></span></span></span><span>﻿</span></span></p></details></li></ul><ul id="fa7220f9-af01-4547-8da5-4c7cea29a196" class="toggle"><li><details open=""><summary>Multipunto </summary><p id="f2902dd8-e5c0-4948-8170-0bb3640ca2e7" class="">Las redes multipunto son las mas tipicas de las LANs, estan conectadas de tal forma que cuando se envian datos todas las estaciones los reciben, se suelen utilizar buses, el medio es compartido mediante tecnicas de acceso al medio, no hay conmutacion de los datos.</p></details></li></ul><ul id="96f7105b-9c9b-4a0c-94b1-9befedab1983" class="toggle"><li><details open=""><summary>Tipologías</summary><ul id="47d631bc-18fb-4ee0-85bb-7502f357a234" class="bulleted-list"><li>Estrella</li></ul><ul id="dc021b45-c5a9-40f9-b5bc-974d8fc642a6" class="bulleted-list"><li>Bus</li></ul><ul id="c3adcf68-829e-4700-b846-189b0cbad56f" class="bulleted-list"><li>Red Inalambrica</li></ul><ul id="dca83d36-2bd7-4390-9186-1c7f5b0b9777" class="bulleted-list"><li>Anillo</li></ul><ul id="48cd620e-df3d-4153-b266-a5406ed1509c" class="bulleted-list"><li>Mallada</li></ul><ul id="62906493-d7e2-40d7-9d66-a652e677dee7" class="bulleted-list"><li>Arbol</li></ul></details></li></ul><ul id="1c5cba05-587e-40ad-8763-aaaf59e8587f" class="toggle"><li><details open=""><summary>Redes de difusión</summary><p id="a9e866d4-5ec7-4718-9adc-783174bd5b39" class="">Funciona igual que una red multipunto, además los inconvenientes de este tip de red es que puede tener problemas de seguridad, además se puede realizar broadcast y multicast y la ubicación del destinatario es desconocida.</p></details></li></ul><ul id="dbbb85c0-23de-4de8-8aff-5cc9f10571cf" class="toggle"><li><details open=""><summary>Tecnicas de acceso al medio</summary><p id="5b8dad76-d82e-466e-8f3b-5c878b6dfd5e" class="">Se clasifican mediante la dependencia del tiempo, la contencion y la portadora</p><figure id="c470df0c-9ae2-486a-b4d6-b4201259978b" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled.png"><img style="width:784px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled.png"/></a></figure></details></li></ul><ul id="8ac3d3d9-2602-4272-953e-3c14966da83a" class="toggle"><li><details open=""><summary>Tipos de accesos al medio</summary><p id="ad3cafd5-c4fd-486d-ad27-7aa428f19de6" class="">protocolos a traves de los cuáles los sistemas se ponen de acuerdo para compartir un medio de transmisión común. Hay dos tipos de métodos de control de acceso al medio de comunicación para medios compartidos: </p><ul id="0df5482b-ae01-4dbe-9240-491f390454da" class="bulleted-list"><li>Controlado - cada nodo tiene su propio tiempo de usar el medio</li></ul><ul id="c2a34cf9-2ad9-41ba-a687-99c47a219c98" class="bulleted-list"><li>Aleatorio - todos los nodos compiten por el uso del medio</li></ul><ul id="cbd9ef87-93f2-4ea9-9dee-b963c1cf927c" class="toggle"><li><details open=""><summary>CSMA</summary><p id="70e4c978-25df-43dc-ac34-ae997de7239c" class="">No interrumpe al que habla, carrier sense, si el canal esat libre retrasnsmite, en el caso de que el canal este ocupado espera hasta que este libre.</p></details></li></ul><ul id="3e7d23ba-8151-413f-9dd2-a88d1d5c17a7" class="toggle"><li><details open=""><summary>CSMA/CD</summary><p id="8cbe3d15-7fdf-4e15-a9f0-ba0658b61542" class="">En el caso de que se detecte colision se deja de transmitir y se espera un tiempo aleatorio (backoff) antes de volver a transmitir</p></details></li></ul><ul id="84ab8ce2-a8fa-42e8-aa2f-7aa65a2b8c02" class="toggle"><li><details open=""><summary>CSMA/CA</summary><p id="dac9e0ae-524d-4f35-9132-c019607f2e9f" class="">El periodo de espera es aleatorio, ademas el receptor confirma las tramas debido a los problemas para derectar si ha ahbido colision, lo normal es utilizarlo en redes inalambricas  porque las señales se atenuan y la deteccion de portadora podria fallar, los equipos inalambricos no cuentan con un modo practico para transmitir y recibie simultaneamente</p></details></li></ul></details></li></ul><ul id="77c0e47e-e160-446a-885a-e00154c82bc7" class="toggle"><li><details open=""><summary>Red de conmutación</summary><p id="2194fc23-03f6-45b6-bbde-a49a679170e7" class="">Conjunto de nodos interconectados donde la información va de un nodo origen a uno destino, sin que a los nodos les concierne el contenido de los datos. Los datos son encaminados hasta la estación destino, por los nodos de la red.</p><ul id="2fa81f31-3b4f-43bd-bed8-865fa94002ce" class="toggle"><li><details open=""><summary>Red de conmutación de circuitos</summary><p id="4ca4cd74-6cb8-42ff-8634-00a8ce8ec645" class="">Se establece una via dedicada, temporal y exclusiva para la transmisión de datos extremo a extremo, los inconvenientes son que la capacidad del canal se desaprovecha cuando no se envían datos, el origen y destino deben de transmitir a la misma velocidad y cada conexión consume muchos recursos de la red</p></details></li></ul><ul id="9d094bff-3f94-4d85-9c05-7f37d2e1c687" class="toggle"><li><details open=""><summary>Red de conmutación de mensajes</summary><p id="f941266d-fe46-4747-8083-87afbc3017fe" class="">Los nodos intermedios son los encargados de encaminar y conmutar la información mediante el almacenamiento y reenvío. Cada nodo intermedio verifica la integridad del mensaje, cada uno de estos mensajes debe de incluir la dir. del destinatario y los mensajes se enrutan en su totalidad.</p></details></li></ul><ul id="e61c8412-307c-49c6-a9be-4afdb6215253" class="toggle"><li><details open=""><summary>Red de conmutación de paquetes</summary><p id="631d8ea1-ade2-4c28-a6dc-640022e5bd52" class="">Las redes de conmutación permiten él envío de bloques de datos entre dos estaciones, los datos a enviar se separan en paquetes que se enviaran uno a uno al receptor. Las ventajas de este sistema es la tolerancia a fallos de las líneas, tiene mayor eficiencia ya que el enlace es compartido dinámicamente, el intercambio de paquetes entre hosts de diferentes velocidades y consume recursos del sistema solo cuando se envía (o recibe) un paquete. Los principales inconvenientes son la necesidad de información de control, la perdida y retardo de los paquetes y el ancho de banda no garantizado (no apto para voz y video en TR) </p><ul id="562bd8ce-5795-4d15-8841-e88c0957dc43" class="toggle"><li><details open=""><summary>Mediante Datagramas</summary><p id="7c4fcfac-02fb-4d43-926d-63cb2884afe7" class="">Los paquetes de datos se encaminan de forma independient4e por lo que el orden de llegada de los paquetes no tiene porque ser el inicial.</p><figure id="c1ec0b3d-3212-43c6-991c-95e9d2886ac7" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%201.png"><img style="width:486px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%201.png"/></a></figure></details></li></ul><ul id="02153773-12c8-4112-bc65-9545f24b7efa" class="toggle"><li><details open=""><summary>Mediante Circuitos virtuales</summary><p id="1678a584-55ba-446a-a8c7-b3eebc117e66" class="">Se establece una ruta de envio antes del envio de los paquetes. Es parecido a una red de conmutacion de circuitos pero parcial de aqui su nombre.</p><figure id="3374647c-c66d-449e-b9fd-f6a91788fa8f" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%202.png"><img style="width:606px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%202.png"/></a></figure></details></li></ul></details></li></ul><figure id="08f9dd6e-efc6-4614-a830-e40442507592" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%203.png"><img style="width:680px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%203.png"/></a></figure></details></li></ul><h3 id="f8095c5b-7265-4f55-8cb9-5a404d6085f9" class="">Pila de preguntas II </h3><ul id="ec096346-98d6-421f-9882-83e516d663da" class="toggle"><li><details open=""><summary>Modelo de referencia IEEE 802.x</summary><p id="27111f45-307b-4bca-835f-aa5e064b6ad0" class="">El objetivo de IEEE 802 es conseguir un estándar multifabricante  para el diseño de LANs. Este modelo siguió el modelo OSI, pero descompone la capa de enlace y la capa física en:</p><ul id="a277cb8a-9f1b-4f3d-8d36-e2fcd22bffe2" class="bulleted-list"><li>Capa de enlace <ul id="8d0eee16-36a2-47dc-9c5d-d89ebf92137b" class="bulleted-list"><li>LLC - logical link control</li></ul><ul id="d5d8ced5-08e3-4486-af46-664675d5f667" class="bulleted-list"><li>MAC - media access control</li></ul></li></ul><ul id="34d9bb82-5e7c-41ad-9bd2-dd46bd22b22b" class="bulleted-list"><li>Enlace Físico<ul id="aeae3279-305b-4d64-8291-de7f3bb78cd8" class="bulleted-list"><li>PS - physical signalling</li></ul><ul id="9954b4ae-2c5d-4672-9bb3-9ec2bd9ec323" class="bulleted-list"><li>AUI - access unit interface</li></ul><ul id="28f133d5-4421-498c-a9f3-3e09ae4f7621" class="bulleted-list"><li>PMA - physical medium attachment</li></ul></li></ul></details></li></ul><ul id="d5de58e5-03ee-4083-a641-9c40692af65c" class="toggle"><li><details open=""><summary>Protocolo de acceso al medio en Ethernet/IEEE 802.3</summary><ul id="823b415b-3b9c-401a-9660-df1ff554b8ef" class="toggle"><li><details open=""><summary>Ethernet</summary><p id="269a406f-826b-4538-b16d-fac0118d55c5" class="">El acceso al medio compartido es por la detección de la onda portadora y con detección de colisiones (CSMA/CD), la velocidad a aumentado.</p><ul id="eb28be6d-fc15-4c00-b506-3482205880bf" class="toggle"><li><details open=""><summary>Tamaño mínimo de la trama Ethernet</summary><figure id="ef60d6bb-b0a4-4ffa-92d1-9d7a94afacc7" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%204.png"><img style="width:737px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%204.png"/></a></figure></details></li></ul></details></li></ul><ul id="c8326654-84be-4c82-bfe3-eaccb839db31" class="toggle"><li><details open=""><summary>Protocolo de acceso al medio CSMA</summary><p id="1666efa8-d51c-48d7-af8b-a21f91a4386d" class="">Son escuchas del medio, antes de transmitir, para saber si existe presencia de portadora ocupando el canal, con el fin de evitar colisiones.</p><ul id="1fa4b540-2bbb-49fc-815b-cb41f7bc74e9" class="toggle"><li><details open=""><summary>CSMA 1-persistente</summary><p id="fcc5e930-cef4-4e65-9355-f92403cd9387" class="">Escuchar si está el canal libre, si lo está enviar la trama. Si no está libre esperar a que se libere y después enviar. Su nombre viene de la probabilidad 1 lo que quiere decir certeza. Uno de los problemas son que cuando se produce una colisión de una trama todas las demás se van acumulando para después emitir y puede provocar que cuando se liberen intentaran emitirse a la vez pero provocarían que colisionaran varias por lo que se pierde bastante eficiencia.</p></details></li></ul><ul id="0ed58905-cd3a-451e-8bef-113971174208" class="toggle"><li><details open=""><summary>CSMA no persistente</summary><p id="da0ef143-369c-4a36-be8b-bbc2114b959d" class="">Solo envía cuando este libre el canal, pero en el caso de que no esté libre espera un tiempo aleatorio antes de enviar, lo cual tiene una menor eficiencia que CSMA 1-persistente e introduce una mayor latencia, se comporta mejor en situaciones de tráfico intenso.</p></details></li></ul><ul id="40189573-7c22-49f8-a4f7-505dc8dddf79" class="toggle"><li><details open=""><summary>CSMA p-persistente</summary><p id="9f851ae3-234e-4704-8d85-5a6ff5f72e41" class="">Combina ambas y el protocolo aplica con tiempo reanudado con intervalos, envia tramas si en las escuchas esta libre. </p><p id="1e991371-ab68-4549-9cc2-8684345e15de" class="">Cuando el canal se libera transmite con una probabilidad p (o no transmite con una probabilidad q=1-p); si no transmite en el primer intervalo el proceso se repite en el siguiente, es decir, transmite con una probabilidad p, o no transmite
+con una probabilidad q. El proceso se repite hasta que finalmente la trama es transmitida o bien otro ordenador utiliza el
+canal, en cuyo caso espera un tiempo aleatorio y empieza de nuevo el proceso desde el principio. Si p=0,5 y no transmite, la
+probabilidad de que transmita en el siguiente slot es de 1 (100%). Ajustando el valor del parámetro p el funcionamiento de
+este protocolo se puede regular en todo el rango entre el de CSMA 1-persistente y el de CSMA no persistente. Su eficiencia
+es en general superior a la de ambos.</p></details></li></ul></details></li></ul><ul id="05dd58ea-56f6-4538-8c17-2a86dcfbcd66" class="toggle"><li><details open=""><summary>Protocolo CSMA/CD</summary><figure id="2c0f4f91-1cda-4b50-9f17-92310fc8e6d6" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%205.png"><img style="width:920px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%205.png"/></a></figure><figure id="40931c5a-9ad0-4231-a14f-07b63a8daa44" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%206.png"><img style="width:837px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%206.png"/></a></figure></details></li></ul><ul id="ff12b85c-420d-4518-9916-2c2d16db70f7" class="toggle"><li><details open=""><summary>Algoritmo de retardo BEB</summary><figure id="fdf0e05c-0dca-47b0-befa-fa6953d7e334" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%207.png"><img style="width:810px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%207.png"/></a></figure></details></li></ul></details></li></ul><ul id="00b955ec-7a7a-4ed4-a26a-bb7ef7fab8d3" class="toggle"><li><details open=""><summary>Estándares físicos de IEEE 802.</summary><figure id="bf86d9c5-9e66-4c87-a223-45361eccf827" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%208.png"><img style="width:87px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%208.png"/></a></figure><ul id="d8f94d91-ab61-497c-b05a-0722e257b0c6" class="toggle"><li><details open=""><summary>Clasificación de redes Ethernet</summary><figure id="bf4a74f8-f557-4e87-826a-eeadc5e30ba9" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%209.png"><img style="width:481px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%209.png"/></a></figure></details></li></ul><ul id="8b8e85d5-7ca0-42b7-a607-7c38d45e13b6" class="toggle"><li><details open=""><summary>Denominación informal de los estándares físicos
+de las LANs Ethernet</summary><figure id="ba1b51b7-b412-447e-87cc-64aa70690c32" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2010.png"><img style="width:718px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2010.png"/></a></figure></details></li></ul><ul id="af040190-2c1d-4288-9885-e36107b96171" class="toggle"><li><details open=""><summary>Modelo IEEE 802.x - subcapa nivel físico</summary><figure id="8077a23b-94e3-4338-802d-0333f194649b" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2011.png"><img style="width:711px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2011.png"/></a></figure></details></li></ul><ul id="836c2b77-ecf7-4ca2-9e5b-de4d7b1b5530" class="toggle"><li><details open=""><summary>Estándares físicos LANs</summary><figure id="eae2d8b2-e8d1-48de-b89a-b9661b9e833f" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2012.png"><img style="width:802px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2012.png"/></a></figure><figure id="efa83e2d-5076-4070-8e8b-08f01a4935dc" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2013.png"><img style="width:837px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2013.png"/></a></figure><figure id="788fd653-ed3e-4f90-a0b7-2de92b91b7b4" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2014.png"><img style="width:832px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2014.png"/></a></figure><figure id="6b8a11a8-bc8b-4c2f-a3d0-6061798c1d2c" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2015.png"><img style="width:825px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2015.png"/></a></figure></details></li></ul><ul id="21c0f6fe-0166-49de-adea-41e76704c3f5" class="toggle"><li><details open=""><summary>El modelo de IEEE 802.x - Subcapas del nivel físico por encima de 10Mbps</summary><figure id="4309e058-fee1-499a-8245-4c7d347436e8" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2016.png"><img style="width:768px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2016.png"/></a></figure></details></li></ul><ul id="4ecb0be7-2681-4fb9-919e-bf9ccd4fb7d2" class="toggle"><li><details open=""><summary>Estándares físicos de las LANs - IEEE 802.3ab ampliado (1000BASE-X)</summary><figure id="2428f790-8ac2-4f59-a58c-2fd622aa7749" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2017.png"><img style="width:697px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2017.png"/></a></figure></details></li></ul><ul id="7eff5db3-9306-46a4-bacd-cc5df386d549" class="toggle"><li><details open=""><summary>Estándares físicos de las LANs - IEEE 802.3ae (10GBASE-X)</summary><figure id="aea387c9-a40c-4ad4-9c42-ea49b9576ed5" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2018.png"><img style="width:724px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2018.png"/></a></figure></details></li></ul><ul id="4378c4fa-c414-433f-a85e-dbe13b5ea350" class="toggle"><li><details open=""><summary>Estándares físicos de las LANs - IEEE 802.3ae (10GBase-SR)</summary><figure id="8b059efd-6143-4980-92e5-a2746a20dea0" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2019.png"><img style="width:840px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2019.png"/></a></figure></details></li></ul></details></li></ul><ul id="daa2ae96-2e9d-4590-bea7-bcfff0852b82" class="toggle"><li><details open=""><summary>Formato de la trama Ethernet</summary><ul id="3a6fd987-cad8-4e5f-ac81-d32826ceef4c" class="toggle"><li><details open=""><summary>Formato de la trama MAC</summary><figure id="9f3153d2-4c21-4892-9d50-8562c52d9ba9" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2020.png"><img style="width:810px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2020.png"/></a></figure></details></li></ul><ul id="156b5679-091c-4a5c-aab8-7f0164dc515b" class="toggle"><li><details open=""><summary>Formato de la trama IEEE 802.2</summary><figure id="7ffeb652-116e-4062-8cee-8573e3efdfca" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2021.png"><img style="width:809px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2021.png"/></a></figure></details></li></ul><ul id="eb247929-7d8d-49fd-bc58-fdd95f199049" class="toggle"><li><details open=""><summary>Formato de la trama IEEE 802.2 con SNAP</summary><figure id="0779c378-f273-447f-b4be-61a5ab8c4969" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2022.png"><img style="width:793px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2022.png"/></a></figure></details></li></ul><ul id="abaafb03-2bd1-4ee8-8a4a-89a9d5703c50" class="toggle"><li><details open=""><summary>Diferencias</summary><figure id="4ccfd365-ec9b-47bf-aa43-e1e9f28dadd0" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2023.png"><img style="width:876px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2023.png"/></a></figure></details></li></ul></details></li></ul><ul id="6963a49d-7a91-4c40-b23e-87255fd5c2a5" class="toggle"><li><details open=""><summary>Interconexión entre LANs</summary><ul id="d156cba4-ebda-499e-8c82-35c692ed3666" class="toggle"><li><details open=""><summary>Concepto de interconexión de redes</summary><figure id="6455f6ab-be82-4cd3-84c4-96b83aebff5f" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2024.png"><img style="width:756px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2024.png"/></a></figure></details></li></ul><ul id="539ea216-5c5a-4737-b17a-2207b8fdb4e4" class="toggle"><li><details open=""><summary>Interconexión a nivel físico</summary><figure id="9ee4e66d-00ee-4d9c-92a5-9f5bf146c808" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2025.png"><img style="width:641px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2025.png"/></a></figure><figure id="56e60685-cb29-46a7-8da2-5bb6607974d8" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2026.png"><img style="width:612px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2026.png"/></a></figure></details></li></ul><ul id="2c6d163c-7e3c-4895-9f62-a1681315b802" class="toggle"><li><details open=""><summary>Interconexión a nivel de enlace</summary><figure id="3a0db3db-4c60-456b-af87-a4db5a42ae03" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2027.png"><img style="width:913px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2027.png"/></a></figure><figure id="7f459cbd-1066-4254-915e-ca787a942b9e" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2028.png"><img style="width:851px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2028.png"/></a></figure></details></li></ul><ul id="02fd84c1-4b31-4d97-91e9-ab60502b5aec" class="toggle"><li><details open=""><summary>Puentes, P</summary><figure id="f45353d7-6831-4333-88e8-30e3bd88b76f" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2029.png"><img style="width:837px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2029.png"/></a></figure></details></li></ul><ul id="8456b651-bc86-46f1-8fba-e31cfea490de" class="toggle"><li><details open=""><summary>Casos de estudio</summary><figure id="0efe2ea3-e425-47a3-a662-a788196cde0c" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2030.png"><img style="width:924px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2030.png"/></a></figure><figure id="a2ddb703-e4ec-4c27-b9aa-08689053576b" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2031.png"><img style="width:906px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2031.png"/></a></figure><figure id="9c98471d-5780-4200-9ee7-7108cad6ad7c" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2032.png"><img style="width:909px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2032.png"/></a></figure></details></li></ul></details></li></ul><ul id="68886dac-409f-4a05-a18f-bdab38a833d8" class="toggle"><li><details open=""><summary>Topologías LAN con bucles</summary><ul id="89df2b0d-8810-4775-b34b-f9bd4b02afbf" class="toggle"><li><details open=""><summary>El problema de los bucles</summary><figure id="b4de57e6-e79e-4a89-b473-4c8277aa705e" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2033.png"><img style="width:926px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2033.png"/></a></figure></details></li></ul><ul id="d83f64a6-a95d-466e-ad53-1aa3e68c710b" class="toggle"><li><details open=""><summary>Representación de las redes como grafos</summary><figure id="4be5b4ee-b729-427f-9217-85c5dc058278" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2034.png"><img style="width:695px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2034.png"/></a></figure></details></li></ul><ul id="52ad8cc8-6b73-499e-9a18-3851b487ad4c" class="toggle"><li><details open=""><summary>El protocolo STP, Spanning tree protocol</summary><figure id="b5dde809-b6bd-4041-8849-afa99ab9ea60" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2035.png"><img style="width:745px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2035.png"/></a></figure><figure id="3113fa79-b7a3-4aa4-b797-ffdd8c7a2a05" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2036.png"><img style="width:730px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2036.png"/></a></figure></details></li></ul><ul id="bd4c1e4e-9b8b-459f-8b84-056ca3a2b488" class="toggle"><li><details open=""><summary>Caso de estudio de STP</summary><figure id="84d71349-0eaa-473e-a7ea-6f2e5c86d72f" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2037.png"><img style="width:671px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2037.png"/></a></figure></details></li></ul></details></li></ul><ul id="21318ce9-5032-452f-9672-91405c01a649" class="toggle"><li><details open=""><summary>LANs conmutadas</summary><ul id="859e5901-6df8-4f88-ba4b-1aa8248802a1" class="toggle"><li><details open=""><summary>Los conmutadores o switches Ethernet</summary><figure id="6b991689-9e71-4e6e-b055-91b82a5b133b" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2038.png"><img style="width:808px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2038.png"/></a></figure></details></li></ul><ul id="9843f102-86fe-41cf-932b-c4620e7772ff" class="toggle"><li><details open=""><summary>Modos de funcionamiento de los conmutadores</summary><figure id="c85bbadb-c152-4bf9-8a0b-cbfa3fa00909" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2039.png"><img style="width:806px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2039.png"/></a></figure></details></li></ul><ul id="12906058-f74a-4ebe-835e-3f31b66615d4" class="toggle"><li><details open=""><summary>Casos de estudio</summary><figure id="03ec3086-7450-4df3-b825-a2f4bc1f9780" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2040.png"><img style="width:865px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2040.png"/></a></figure><figure id="0fdb8271-15eb-4a0a-8fc9-66b1e7cf17c2" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2041.png"><img style="width:799px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2041.png"/></a></figure></details></li></ul></details></li></ul><ul id="94887959-78ba-427d-b31c-f83e68b285a4" class="toggle"><li><details open=""><summary>Redes LAN virtuales (VLANs)</summary><ul id="bb70c5ba-d3cd-4ec5-9e66-b6f78402622e" class="toggle"><li><details open=""><summary>Concepto de VLAN</summary><figure id="bc0a87f7-099b-4029-b304-1cbb1da9c573" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2042.png"><img style="width:796px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2042.png"/></a></figure></details></li></ul><ul id="f608f184-0b60-498d-b2bb-5d348832a279" class="toggle"><li><details open=""><summary>Ventajas de las VLAN</summary><figure id="9f038b33-ef67-4b7f-a6ae-d5d8411e2f35" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2043.png"><img style="width:863px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2043.png"/></a></figure></details></li></ul><ul id="703c827c-b55f-46e0-876f-095b32a3ba0a" class="toggle"><li><details open=""><summary>Concepto de puerto trunk y puerto de acceso</summary><figure id="3f97e7e8-1f08-41cc-922a-ff4bca552e48" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2044.png"><img style="width:800px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2044.png"/></a></figure></details></li></ul><ul id="376eed53-9522-4bf1-b6a3-6424263df2bc" class="toggle"><li><details open=""><summary>Modificación de la trama MAC para las VLANs</summary><figure id="99952ee3-7590-4d01-b694-2242f1eb3697" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2045.png"><img style="width:786px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2045.png"/></a></figure></details></li></ul><ul id="e4c4ccb7-3ec4-49fa-88d6-8b3bc5410313" class="toggle"><li><details open=""><summary>Caso de estudio de VLANs</summary><figure id="ab3c22f6-c1fd-47b5-90c2-46e6468a16dc" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2046.png"><img style="width:910px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2046.png"/></a></figure></details></li></ul><ul id="9275ea70-036a-4ba6-9895-58dc10c56012" class="toggle"><li><details open=""><summary>Redes de área local</summary><figure id="c1419980-e961-42e5-8b3f-c2456d5e94d2" class="image"><a href="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2047.png"><img style="width:822px" src="Q%20-%20Questions%20Tema%202%20c470df0c9ae2486ab4d6b4201259978b/Untitled%2047.png"/></a></figure></details></li></ul></details></li></ul><h2 id="5ad64db1-a4aa-4f85-bfa8-aacbfcf7f2ea" class="">LANs Inalámbricas</h2><p id="26982777-f0e4-47c0-a8fe-6cc170db7f97" class="">
+</p></div></article></body></html>
